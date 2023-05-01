@@ -76,6 +76,16 @@ a:hover {
   position: relative;
 }
 
+.carousel-caption {
+  background-color: black;
+  width: fit-content;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  transform: translateX(-100%);
+}
+
 .d-md-block{
   text-align: left;
   color: rgb(132, 132, 255);
