@@ -13,6 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="app.js"></script>
     <title>CinemArte</title>
+    <style>
+      .error-message {
+        color: red;
+        margin-bottom: 10px;
+      }
+    </style>
 </head>
 <body>
     <header class="headerContenedor">
@@ -35,18 +41,21 @@
 
     <div class="container" style="margin-top: 20px;">
       <h2>Formulario de Contacto</h2>
-      <form>
+      <form id="contact-form" onsubmit="return validateForm()">
         <div class="form-group" style="margin-bottom: 20px;">
-          <label for="nombre">Nombre:</label>
-          <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+          <label for="name">Nombre:</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre" required>
+          <span id="name-error" class="error-message"></span>
         </div>
         <div class="form-group" style="margin-bottom: 20px;">
-          <label for="apellido">Apellido:</label>
-          <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" required>
+          <label for="lastname">Apellido:</label>
+          <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Ingrese su apellido" required>
+          <span id="lastname-error" class="error-message"></span>
         </div>
         <div class="form-group" style="margin-bottom: 20px;">
-          <label for="correo">Correo:</label>
-          <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo" required>
+          <label for="email">Correo:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo" required>
+          <span id="email-error" class="error-message"></span>
         </div>
         <div class="form-group" style="margin-bottom: 20px;">
           <label for="pais">País:</label>
@@ -61,16 +70,19 @@
         </div>
         <div class="form-group" style="margin-bottom: 20px;">
           <label for="motivo">Motivo de la consulta:</label>
-          <input type="text" class="form-control" id="motivo" placeholder="Ingrese el motivo de la consulta" required>
+          <input type="text" class="form-control" id="motivo" name="motivo" placeholder="Ingrese el motivo de la consulta" required>
+          <span id="motivo-error" class="error-message"></span>
+
         </div>
         <div class="form-group" style="margin-bottom: 20px;">
           <label for="consulta">Consulta:</label>
-          <textarea class="form-control" id="consulta" rows="8" placeholder="Ingrese su consulta" required></textarea>
+          <textarea class="form-control" id="consulta" name="consulta" rows="8" placeholder="Ingrese su consulta" required></textarea>
+          <span id="consulta-error" class="error-message"></span>
         </div>
         <button type="submit" class="formBoton">Enviar</button>
       </form>
+      <script src="app.js"></script>
     </div>
-      
       <div>
         
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.2566686944147!2d-58.438056261069015!3d-34.59117868518019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb58a526d8df1%3A0x519efaf4401e4ab5!2sJufr%C3%A9%20950%2C%20C1414AYT%20CABA!5e0!3m2!1ses!2sar!4v1684708962653!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="formMap" id="mapa"></iframe>

@@ -2,6 +2,7 @@ body{
   font-family: 'Open Sans', sans-serif !important;
   width: 99% !important;
   min-height: 25rem;
+  background-color: rgba(0, 0, 255, 0.281);
   
 }
 
@@ -193,7 +194,7 @@ nav a {
   width: 50%;
   /*border: 3px solid red;*/
 }
-
+ 
 .img-container {
   width: 100%;
   margin-right: 0px;
@@ -218,7 +219,7 @@ nav a {
   margin-right: 0px;
   padding: 0;
   
-}
+} 
 
 .miFooter {
   background-color: #F2F2F2;
@@ -361,11 +362,3 @@ nav a {
   align-items: center;
   justify-content: center;
 }
-
-
-
-
-
-
-
-
